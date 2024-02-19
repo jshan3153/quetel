@@ -1,0 +1,31 @@
+1. To send SMS message, we can start with at+cmgf=1 to set to text mode.
+
+2. at+cnmi=2,1 is used to set new message indications.
+
+3. To send out message, please do at+cmgs="number"
+	Input the content after ">"
+	When finish, move the mouse at tht end of the content and press "Ctrl+z"(which is also ascii 0X1a) on
+	the keyboad to send out.
+	
+4. You can see such URC pops out when the module recives a message. Thsis URC tells you the ID for your new 
+   message. For example, mine is 4.
+   
+5. You can do at+cmgr=ID to read the message of your choice. Or you can do at+cmgl="all" to read all the 
+   message you recieved.
+   
+
+6. You can do at+cmgd=ID to delete the message of your choice. Or you can do at+cmgd=1,4 to delete all the message you received.
+
+7. If you want to change the TE character set, please try at+cscs
+   GMS is the default alphabet.
+   IRA is international reference alphabet
+   USC2 is USC2 alphabet
+   
+8. You can use at+csca? to check default service center number.Sometimes wrong service cneter will cause failure to 
+   send or receive messages.
+   You can also change the service center address here by at+csca="service center address", type of service center address
+   
+
+https://forums.quectel.com/t/how-to-send-and-receive-sms-messages-on-quectel-module/15555
+
+https://www.diafaan.com/sms-tutorials/gsm-modem-tutorial/online-sms-pdu-decoder/
